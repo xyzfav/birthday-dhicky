@@ -934,7 +934,6 @@ Blow Candle
 id="birthdayVideo"
 controls
 playsinline
-muted
 style="width:100%; border-radius:20px;">
   <source src="video2.mp4" type="video/mp4">
 </video>
@@ -1343,22 +1342,9 @@ function openVideo(){
   .getElementById("videoPage")
   .classList.add("active");
 
-  const music =
-  document.getElementById("bgMusic");
-
-  music.play().catch(()=>{});
-
-  const video =
-  document.getElementById("birthdayVideo");
-
-  video.load();
-
-  setTimeout(()=>{
-    video.play().catch(err=>{
-      console.log(err);
-    });
-  },300);
-
+  document
+  .getElementById("bgMusic")
+  .play().catch(()=>{});
 }
   
 function blowCandle(){
