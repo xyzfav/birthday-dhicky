@@ -623,6 +623,64 @@ transform:translateY(0);
 display:none;
 }
 
+#videoPage,
+#endingPage{
+background:#111;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:30px;
+text-align:center;
+color:#f3e8d2;
+}
+
+.video-box{
+width:90%;
+max-width:700px;
+}
+
+.video-box video{
+width:100%;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+.ending-card{
+max-width:700px;
+animation:fadeEnding 2s;
+}
+
+.ending-card h1{
+font-family:'Cinzel',serif;
+font-size:55px;
+margin-bottom:35px;
+}
+
+.ending-card p{
+font-size:28px;
+line-height:1.8;
+}
+
+.more-box{
+background:#f5ecda;
+color:#2f2a24;
+padding:30px;
+border-radius:25px;
+margin-top:50px;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+@keyframes fadeEnding{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
 </style>
 </head>
 
@@ -1170,30 +1228,102 @@ document
 
 function blowCandle(){
 
-  document.getElementById("candle")
-  .style.opacity = "0";
+document
+.querySelectorAll(".mini-candle")
+.forEach(c=>{
+c.classList.add("flame-off");
+});
 
-  document.getElementById("wishMessage")
-  .innerHTML =
-  "🖤 Selamat ulang tahun, sayangku🖤<br><br>Thank you for being part of my universe.";
+document.getElementById("wishMessage")
+.innerHTML =
+"🖤 Selamat ulang tahun, sayangku 🖤<br><br>Thank you for being part of my universe.";
 
-  document.getElementById("wishMessage")
-  .style.opacity = "1";
+document.getElementById("wishMessage")
+.classList.add("show");
 
-  setTimeout(()=>{
+setTimeout(()=>{
 
-    document
-    .getElementById("cakePage")
-    .classList.remove("active");
+document
+.getElementById("cakePage")
+.classList.remove("active");
 
-    document
-    .getElementById("videoPage")
-    .classList.add("active");
+document
+.getElementById("videoPage")
+.classList.add("active");
 
-  },5000);
+},5000);
 
 }
+
+ function openEnding(){
+
+document
+.getElementById("videoPage")
+.classList.remove("active");
+
+document
+.getElementById("endingPage")
+.classList.add("active");
+
+}
+
 </script>
+<div id="videoPage" class="page">
+
+<div class="video-box">
+
+<video id="birthdayVideo" controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+
+<button class="btn" onclick="openEnding()">
+Continue →
+</button>
+
+</div>
+
+</div>
+
+
+<div id="endingPage" class="page">
+
+<div class="ending-card">
+
+<h1>The End ✨</h1>
+
+<p>
+Thank you for reading this little website.
+<br><br>
+I hope today makes you smile.
+<br><br>
+I love you today, tomorrow and always 🖤
+</p>
+
+<div class="more-box">
+
+<h2>One Last Surprise ✨</h2>
+
+<p style="font-size:22px;line-height:1.7;margin-top:20px;">
+There's still something waiting for you...
+<br><br>
+But you'll only get it if you come and chat me first 🖤
+</p>
+
+<button class="btn"
+onclick="window.location.href='https://wa.me/6281367542046'">
+Come Find Me 💌
+</button>
+
+</div>
+
+<button class="btn"
+onclick="location.reload()">
+Replay From Beginning 🖤
+</button>
+
+</div>
+
+</div>
 <audio id="bgMusic" loop>
   <source src="0715.MP3" type="audio/mpeg">
 </audio>
