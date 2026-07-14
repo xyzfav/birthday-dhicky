@@ -146,11 +146,12 @@ font-size:22px;
   
 #envelopePage,
 #letterPage{
-justify-content:flex-start;
+justify-content:center;
 align-items:center;
 background:#ece3d0;
-padding-top:80px;
 overflow:auto;
+padding:40px 20px;
+min-height:100dvh;
 }
 
 #galleryPage{
@@ -172,6 +173,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+margin:auto;
 }
 
 .seal{
@@ -189,6 +191,7 @@ margin-bottom:20px;
 
 .letter-paper{
   background:#f7eedc;
+  width:100%;
   max-width:700px;
   padding:60px 45px;
   border:2px solid #c9b48d;
@@ -207,26 +210,25 @@ margin-bottom:30px;
 font-family:'Cinzel',serif;
 }
 
-.letter-paper::before{
-  content:"✦";
-  position:absolute;
-  top:25px;
-  left:50%;
-  transform:translateX(-50%);
-  font-size:30px;
-  color:#9a7c54;
+@media(max-width:600px){
+
+.letter-paper{
+width:95%;
+max-width:95%;
+padding:35px 22px;
+font-size:17px;
+line-height:2;
+margin:auto;
 }
 
 .letter-paper h1{
-  margin-top:20px;
-  margin-bottom:40px;
-  text-align:center;
-  font-family:'Cinzel',serif;
-  font-size:42px;
+font-size:28px;
 }
 
 .letter-paper p{
-  text-align:justify;
+font-style:italic;
+text-align:left;
+}
 }
   
 .memory-title{
@@ -306,6 +308,7 @@ font-size:35px;
 
 .memory-book{
 padding-top:60px;
+justify-content:center;
 }
 
 .book-page{
@@ -431,42 +434,42 @@ Our Memories ✨
 </h1>
 <div class="book-page">
 <img src="together.jpg">
-<h2>Our First Memory</h2>
+<h2>One Of My Favorites</h2>
 <p>
-One of my favorite moments.
-A picture that always makes me smile.
+A simple picture,
+but a very special memory.
 </p>
 </div>
 
 <div class="book-page">
 <img src="cake.jpg">
-<h2>Birthday Night</h2>
+<h2>A Beautiful Memory</h2>
 <p>
-A sweet celebration that became
-another beautiful memory.
+A moment I will always keep
+close to my heart.
 </p>
 </div>
 
 <div class="book-page">
 <img src="bonsai.jpg">
-<h2>Little Moments</h2>
+<h2>You Make Me Smile</h2>
 <p>
-Sometimes the simplest moments
-become the most precious ones.
-</p>
-</div>
-
-<div class="book-page">
-<img src="look.jpg">
-<h2>You</h2>
-<p>
-A photo that reminds me how lucky
-I am to know you.
+Every time I see you,
+my heart feels a little happier.
 </p>
 </div>
 
 <div class="book-page">
 <img src="card.jpg">
+<h2>YOU</h2>
+<p>
+Some memories never fade,
+and this is one of them.
+</p>
+</div>
+
+<div class="book-page">
+<img src="look.jpg">
 <h2>The End</h2>
 <p>
 Thank you for every memory,
