@@ -1170,13 +1170,27 @@ document
 
 function blowCandle(){
 
-  document.querySelectorAll(".mini-candle")
-  .forEach(candle=>{
-    candle.classList.add("flame-off");
-  });
+  document.getElementById("candle")
+  .style.opacity = "0";
 
-  document.getElementById("wishMessage").innerHTML =
-  "🖤 Selamat ulang tahun, sayangku 🖤<br><br>Thank you for being part of my universe.";
+  document.getElementById("wishMessage")
+  .innerHTML =
+  "🖤 Selamat ulang tahun, sayangku🖤<br><br>Thank you for being part of my universe.";
+
+  document.getElementById("wishMessage")
+  .style.opacity = "1";
+
+  setTimeout(()=>{
+
+    document
+    .getElementById("cakePage")
+    .classList.remove("active");
+
+    document
+    .getElementById("videoPage")
+    .classList.add("active");
+
+  },5000);
 
 }
 </script>
