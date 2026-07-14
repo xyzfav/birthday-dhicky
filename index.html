@@ -250,7 +250,7 @@ color:#2f2a24;
 
 .memory-book{
 width:100%;
-max-width:650px;
+max-width:500px;
 padding:70px 15px 60px;
 display:flex;
 flex-direction:column;
@@ -265,7 +265,7 @@ background:linear-gradient(
 #f8f0df,
 #f1e4cc
 );
-padding:25px 25px 25px 60px;
+padding:18px 18px 18px 45px;
 border:2px solid #d2be96;
 border-radius:8px;
 box-shadow:
@@ -289,7 +289,7 @@ background:#d7c5a3;
 }
 
 .book-page img{
-width:90%;
+width:80%;
 display:block;
 margin:0 auto 20px;
 border:12px solid white;
@@ -346,7 +346,7 @@ left:0;
 width:100%;
 height:100%;
 z-index:100;
-touch-action:none;
+touch-action:pan-y;
 border-radius:8px;
 }
 
@@ -655,7 +655,7 @@ y = e.clientY - rect.top;
 }
 
 ctx.beginPath();
-ctx.arc(x,y,18,0,Math.PI*2);
+ctx.arc(x,y,28,0,Math.PI*2);
 ctx.fill();
 }
 
@@ -682,11 +682,9 @@ scratch
 canvas.addEventListener(
 "touchstart",
 function(e){
-e.preventDefault();
 scratching = true;
 scratch(e);
-},
-{passive:false}
+}
 );
 
 canvas.addEventListener(
@@ -696,11 +694,7 @@ canvas.addEventListener(
 
 canvas.addEventListener(
 "touchmove",
-function(e){
-e.preventDefault();
-scratch(e);
-},
-{passive:false}
+scratch
 );
 
 });
