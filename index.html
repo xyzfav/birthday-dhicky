@@ -618,6 +618,11 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+.flame-off::before{
+display:none;
+}
+
 </style>
 </head>
 
@@ -1163,17 +1168,15 @@ document
 
 }
 
-  function blowCandle(){
+function blowCandle(){
 
-const msg =
-document.getElementById("wishMessage");
+  document.querySelectorAll(".mini-candle")
+  .forEach(candle=>{
+    candle.classList.add("flame-off");
+  });
 
-msg.innerHTML =
-"🖤 Selamat ulang tahun, sayangku🖤<br><br>Thank you for being part of my universe.";
-
-setTimeout(()=>{
-  msg.classList.add("show");
-},200);
+  document.getElementById("wishMessage").innerHTML =
+  "🖤 Selamat ulang tahun, sayangku 🖤<br><br>Thank you for being part of my universe.";
 
 }
 </script>
