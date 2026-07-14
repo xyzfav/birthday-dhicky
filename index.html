@@ -926,8 +926,6 @@ Blow Candle
 
 </div>
 
-</div>
-
 <div id="videoPage" class="page">
 
   <div class="video-box">
@@ -1349,6 +1347,18 @@ function openVideo(){
   document.getElementById("bgMusic");
 
   music.play().catch(()=>{});
+
+  const video =
+  document.getElementById("birthdayVideo");
+
+  video.load();
+
+  setTimeout(()=>{
+    video.play().catch(err=>{
+      console.log(err);
+    });
+  },300);
+
 }
   
 function blowCandle(){
@@ -1389,25 +1399,6 @@ document
 }
 
 </script>
-<div id="videoPage" class="page">
-
-<div class="video-box">
-
-<video id="birthdayVideo"
-controls
-playsinline
-muted>
-<source src="video.mp4" type="video/mp4">
-</video>
-
-<button class="btn" onclick="openEnding()">
-Continue →
-</button>
-
-</div>
-
-</div>
-
 
 <div id="endingPage" class="page">
 
