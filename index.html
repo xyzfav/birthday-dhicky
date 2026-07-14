@@ -1330,32 +1330,41 @@ document
 
 }
 
+function openVideo(){
+
+  document
+  .getElementById("cakePage")
+  .classList.remove("active");
+
+  document
+  .getElementById("videoPage")
+  .classList.add("active");
+
+}
+  
 function blowCandle(){
 
-document
-.querySelectorAll(".mini-candle")
-.forEach(c=>{
-c.classList.add("flame-off");
-});
+  document
+  .querySelectorAll(".mini-candle")
+  .forEach(c=>{
+    c.classList.add("flame-off");
+  });
 
-document.getElementById("wishMessage")
-.innerHTML =
-"🖤 Selamat ulang tahun, sayangku 🖤<br><br>Thank you for being part of my universe.";
+  document.getElementById("wishMessage")
+  .innerHTML = `
+  🖤 Selamat ulang tahun, sayangku 🖤
+  <br><br>
+  Thank you for being part of my universe.
+  <br><br>
 
-document.getElementById("wishMessage")
-.classList.add("show");
+  <button class="btn"
+  onclick="openVideo()">
+    Watch Something Special →
+  </button>
+  `;
 
-setTimeout(()=>{
-
-document
-.getElementById("cakePage")
-.classList.remove("active");
-
-document
-.getElementById("videoPage")
-.classList.add("active");
-
-},5000);
+  document.getElementById("wishMessage")
+  .classList.add("show");
 
 }
 
@@ -1376,7 +1385,10 @@ document
 
 <div class="video-box">
 
-<video id="birthdayVideo" controls>
+<video id="birthdayVideo"
+controls
+playsinline
+muted>
 <source src="video.mp4" type="video/mp4">
 </video>
 
