@@ -887,7 +887,7 @@ See The Stars ✨
 </p>
 
     <button class="btn" onclick="openCake()">
-      One Last Surprise →
+      Another Surprise →
     </button>
 
   </div>
@@ -932,9 +932,14 @@ Blow Candle
 
   <div class="video-box">
 
-    <video id="birthdayVideo" controls playsinline>
-      <source src="video2.mp4" type="video/mp4">
-    </video>
+    <video
+id="birthdayVideo"
+controls
+playsinline
+muted
+style="width:100%; border-radius:20px;">
+  <source src="video.mp4" type="video/mp4">
+</video>
 
     <button class="btn" onclick="openEnding()">
       Continue →
@@ -1340,6 +1345,10 @@ function openVideo(){
   .getElementById("videoPage")
   .classList.add("active");
 
+  const music =
+  document.getElementById("bgMusic");
+
+  music.play().catch(()=>{});
 }
   
 function blowCandle(){
@@ -1355,9 +1364,9 @@ function blowCandle(){
   🖤 Selamat ulang tahun, sayangku 🖤
   <br><br>
   Thank you for being part of my universe.
-  <br><br>
 
   <button class="btn"
+  style="margin-top:20px;"
   onclick="openVideo()">
     Watch Something Special →
   </button>
@@ -1365,7 +1374,6 @@ function blowCandle(){
 
   document.getElementById("wishMessage")
   .classList.add("show");
-
 }
 
  function openEnding(){
