@@ -1043,89 +1043,59 @@ style="width:100%; border-radius:20px;">
 <script>
 
 let n = 3;
-let sparkleStarted = false;
+countdown.innerHTML = n;
 
-const countdown =
-document.getElementById("countdown");
+const timer = setInterval(() => {
 
-countdown.innerHTML = "Tap To Start ✨";
-
-countdown.addEventListener("click", () => {
-
-  const tick = document.getElementById("tickSound");
-  const paper = document.getElementById("paperSound");
-  const sparkle = document.getElementById("sparkleSound");
-
-  tick.play().catch(()=>{});
-  tick.pause();
   tick.currentTime = 0;
+  tick.play().catch(()=>{});
 
-  paper.play().catch(()=>{});
-  paper.pause();
-  paper.currentTime = 0;
+  n--;
 
-  sparkle.play().catch(()=>{});
-  sparkle.pause();
-  sparkle.currentTime = 0;
+  if(n > 0){
+    countdown.innerHTML = n;
+  } else {
 
-  n = 4;
+    clearInterval(timer);
 
-  const timer = setInterval(()=>{
+    countdown.innerHTML = "✦";
 
-    n--;
+    sparkle.currentTime = 0;
+    sparkle.play().catch(()=>{});
 
-    if(n > 0){
+    setTimeout(() => {
+      countdown.style.display = "none";
 
-      tick.currentTime = 0;
-      tick.play().catch(()=>{});
-      countdown.innerHTML = n;
+      const intro =
+      document.getElementById("introPage");
 
-    } else {
-
-      clearInterval(timer);
-
-      countdown.innerHTML = "✦";
-
-      sparkle.currentTime = 0;
-      sparkle.play().catch(()=>{});
+      intro.classList.add("active");
 
       setTimeout(()=>{
+        intro.style.opacity = "1";
+      },100);
 
-        countdown.style.display = "none";
-
-        const intro =
-        document.getElementById("introPage");
-
-        intro.classList.add("active");
+      setTimeout(()=>{
+        intro.style.opacity = "0";
 
         setTimeout(()=>{
-          intro.style.opacity = "1";
-        },100);
+          intro.classList.remove("active");
 
-        setTimeout(()=>{
+          document
+          .getElementById("newspaper")
+          .classList.add("active");
 
-          intro.style.opacity = "0";
+          paper.currentTime = 0;
+          paper.play().catch(()=>{});
 
-          setTimeout(()=>{
+        },1500);
 
-            intro.classList.remove("active");
+      },2500);
 
-            document
-            .getElementById("newspaper")
-            .classList.add("active");
+    },1000);
+  }
 
-            paper.currentTime = 0;
-            paper.play().catch(()=>{});
-
-          },1500);
-
-        },2500);
-
-      },1000);
-
-    }
-
-  },1000);
+},1000);
 
 }, { once:true });
 
