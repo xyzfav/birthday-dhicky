@@ -1038,7 +1038,25 @@ let sparkleStarted = false;
 const countdown =
 document.getElementById("countdown");
 
-alert("✨ Tap anywhere to begin this little surprise ✨");
+document.body.addEventListener(
+  "click",
+  function enableAudio() {
+    document.getElementById("tickSound").play();
+    document.getElementById("tickSound").pause();
+    document.getElementById("tickSound").currentTime = 0;
+
+    document.getElementById("paperSound").play();
+    document.getElementById("paperSound").pause();
+    document.getElementById("paperSound").currentTime = 0;
+
+    document.getElementById("sparkleSound").play();
+    document.getElementById("sparkleSound").pause();
+    document.getElementById("sparkleSound").currentTime = 0;
+  },
+  { once: true }
+);
+
+alert("✨ Tap layar sekali untuk mengaktifkan suara ✨");
 
 const timer =
 setInterval(()=>{
