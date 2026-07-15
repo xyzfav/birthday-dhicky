@@ -722,25 +722,28 @@ transform:scale(.96);
 }
 
 .ending-card{
-  overflow:hidden;
+  max-width:700px;
+  animation:fadeEnding 2s;
+  overflow:visible;
 }
 
 .movie-text{
-  height:320px;
+  height:180px;
   overflow:hidden;
+  margin-bottom:40px;
 }
 
 .movie-text span{
   display:block;
-  animation:movieText 12s linear forwards;
+  animation:movieText 10s linear forwards;
 }
 
 @keyframes movieText{
-  0%{
+  from{
     transform:translateY(100%);
   }
-  100%{
-    transform:translateY(-100%);
+  to{
+    transform:translateY(-60%);
   }
 }
 </style>
@@ -970,51 +973,6 @@ style="width:100%; border-radius:20px;">
 
 </div>
 
-  <div class="movie-text">
-
-    <h1>The End ✨</h1>
-
-    <p>
-      Thank you for reading this little website.
-      <br><br>
-      I hope today makes you smile.
-      <br><br>
-      I love you today, tomorrow and always 🖤
-    </p>
-
-    <div class="more-box">
-
-      <h2>One Last Surprise ✨</h2>
-
-      <p style="margin-top:20px;">
-        There's still something waiting for you...
-        <br><br>
-        But you'll only get it if you come and chat me first 🖤
-      </p>
-
-      <button class="btn"
-      onclick="window.location.href='https://wa.me/6281367542046'">
-        Come Find Me 💌
-      </button>
-
-    </div>
-
-    <button class="btn"
-    style="
-      background:linear-gradient(135deg,#d8c9a8,#f5ecda);
-      color:#111;
-      border:2px solid #d8c9a8;
-      box-shadow:0 8px 25px rgba(255,255,255,.15);
-      margin-top:50px;
-    "
-    onclick="location.reload()">
-      ↺ Replay From Beginning 🖤
-    </button>
-
-  </div>
-
-</div>
-  
 <script>
 
 let n = 3;
@@ -1415,44 +1373,26 @@ document
 <h1>The End ✨</h1>
 
 <p class="movie-text">
-  <span>
-    Thank you for reading this little surprise.
-    <br><br>
-    I hope today, this gift can make you smile.
-    <br><br>
-    I love you today, tomorrow and always 🖤
-    <br><br>
-    Your beautiful girl
-    <br>
-    ❀ Friska ❀
-  </span>
+<span>
+Thank you for reading this little surprise.
+<br><br>
+I hope today, this gift can make you smile.
+<br><br>
+I love you today, tomorrow and always 🖤
+<br><br>
+Your beautiful girl
+<br>
+❀ Friska ❀
+</span>
 </p>
 
 <div class="more-box">
-
-<h2>One Last Surprise ✨</h2>
-
-<p style="font-size:22px;line-height:1.7;margin-top:20px;">
-There's still something waiting for you...
-<br><br>
-But you'll only get it if you come and chat me first 🖤
-</p>
-
-<button class="btn"
-onclick="window.location.href='https://wa.me/6281367542046'">
-Come Find Me 💌
-</button>
-
+...
 </div>
 
 <div class="replay-box">
-
-✨ ✦ ✨
-
-<button class="replay-btn"
-onclick="location.reload()">
-🌼Open This Little Gift Again🌼
-</button>
+...
+</div>
 
 </div>
 </div>
