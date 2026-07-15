@@ -1056,7 +1056,7 @@ document.body.addEventListener(
   { once: true }
 );
 
-alert("✨ Tap layar sekali untuk mengaktifkan suara ✨");
+alert("✨ Tap To Start ✨");
 
 const timer =
 setInterval(()=>{
@@ -1514,15 +1514,15 @@ document
   <source src="0715.MP3" type="audio/mpeg">
 </audio>
 
-<audio id="tickSound">
+<audio id="tickSound" preload="auto">
   <source src="ticksound.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="paperSound">
+<audio id="paperSound" preload="auto">
   <source src="papersound.mp3" type="audio/mpeg">
 </audio>
 
-<audio id="sparkleSound">
+<audio id="sparkleSound" preload="auto">
   <source src="sparklesound.mp3" type="audio/mpeg">
 </audio>
 </body>
