@@ -726,10 +726,7 @@ transform:scale(.96);
 }
 
 .movie-text{
-  font-size:28px;
-  line-height:1.8;
-  position:relative;
-  height:250px;
+  height:320px;
   overflow:hidden;
 }
 
@@ -739,11 +736,11 @@ transform:scale(.96);
 }
 
 @keyframes movieText{
-  from{
-    transform:translateY(120px);
+  0%{
+    transform:translateY(100%);
   }
-  to{
-    transform:translateY(-80px);
+  100%{
+    transform:translateY(-100%);
   }
 }
 </style>
@@ -972,8 +969,6 @@ style="width:100%; border-radius:20px;">
   </div>
 
 </div>
-
-<div id="endingPage" class="page">
 
   <div class="movie-text">
 
