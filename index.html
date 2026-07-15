@@ -728,22 +728,25 @@ transform:scale(.96);
 }
 
 .movie-text{
-  height:180px;
-  overflow:hidden;
+  font-size:28px;
+  line-height:1.8;
   margin-bottom:40px;
+  text-align:center;
 }
 
 .movie-text span{
   display:block;
-  animation:movieText 10s linear forwards;
+  animation:movieText 12s ease forwards;
 }
 
 @keyframes movieText{
   from{
-    transform:translateY(100%);
+    opacity:0;
+    transform:translateY(60px);
   }
   to{
-    transform:translateY(-60%);
+    opacity:1;
+    transform:translateY(0);
   }
 }
 </style>
@@ -1368,33 +1371,54 @@ document
 
 <div id="endingPage" class="page">
 
-<div class="ending-card">
+  <div class="ending-card">
 
-<h1>The End ✨</h1>
+    <h1>The End ✨</h1>
 
-<p class="movie-text">
-<span>
-Thank you for reading this little surprise.
-<br><br>
-I hope today, this gift can make you smile.
-<br><br>
-I love you today, tomorrow and always 🖤
-<br><br>
-Your beautiful girl
-<br>
-❀ Friska ❀
-</span>
-</p>
+    <p class="movie-text">
+      <span>
+        Thank you for reading this little surprise.
+        <br><br>
+        I hope today, this gift can make you smile.
+        <br><br>
+        I love you today, tomorrow and always 🖤
+        <br><br>
+        Your beautiful girl
+        <br>
+        ❀ Friska ❀
+      </span>
+    </p>
 
-<div class="more-box">
-...
-</div>
+    <div class="more-box">
 
-<div class="replay-box">
-...
-</div>
+      <h2>One Last Surprise ✨</h2>
 
-</div>
+      <p style="font-size:22px;line-height:1.7;margin-top:20px;">
+        There's still something waiting for you...
+        <br><br>
+        But you'll only get it if you come and chat me first 🖤
+      </p>
+
+      <button class="btn"
+      onclick="window.location.href='https://wa.me/6281367542046'">
+        Come Find Me 💌
+      </button>
+
+    </div>
+
+    <div class="replay-box">
+
+      ✨ ✦ ✨
+
+      <button class="replay-btn"
+      onclick="location.reload()">
+        🌼 Open This Little Gift Again 🌼
+      </button>
+
+    </div>
+
+  </div>
+
 </div>
 <audio id="bgMusic" loop>
   <source src="0715.MP3" type="audio/mpeg">
