@@ -726,19 +726,26 @@ transform:scale(.96);
 }
 
 .movie-text{
+  font-size:28px;
+  line-height:1.8;
   position:relative;
-  animation:movieText 15s linear infinite;
+  height:250px;
+  overflow:hidden;
+}
+
+.movie-text span{
+  display:block;
+  animation:movieText 12s linear forwards;
 }
 
 @keyframes movieText{
   from{
-    transform:translateY(300px);
+    transform:translateY(120px);
   }
   to{
-    transform:translateY(-400px);
+    transform:translateY(-80px);
   }
 }
-
 </style>
 </head>
 
@@ -1413,15 +1420,17 @@ document
 <h1>The End ✨</h1>
 
 <p class="movie-text">
-Thank you for reading this little surprise.
-<br><br>
-I hope today, this gift can makes you smile.
-<br><br>
-I love you today, tomorrow and always 🖤
-<br><br>
-Your beautiful girl
-<br>
-❀ Friska ❀
+  <span>
+    Thank you for reading this little surprise.
+    <br><br>
+    I hope today, this gift can make you smile.
+    <br><br>
+    I love you today, tomorrow and always 🖤
+    <br><br>
+    Your beautiful girl
+    <br>
+    ❀ Friska ❀
+  </span>
 </p>
 
 <div class="more-box">
