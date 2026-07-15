@@ -415,10 +415,10 @@ opacity:0;
 
 #starPage{
   background:linear-gradient(
-    to bottom,
-    #060612,
-    #0b0b1f,
-    #050612
+    180deg,
+    #05071a 0%,
+    #02020f 50%,
+    #000000 100%
   );
   justify-content:center;
   align-items:center;
@@ -519,6 +519,13 @@ font-style:italic;
   animation-delay:1s;
 }
 
+.star-name span:nth-child(2),
+.star-name span:nth-child(4){
+  animation:none;
+  opacity:1;
+  text-shadow:none;
+}
+  
 @keyframes blinkStar{
   0%,100%{
     opacity:1;
