@@ -1045,13 +1045,22 @@ n--;
 
 if(n > 0){
 
-countdown.innerHTML = n;
+  document.getElementById("tickSound")
+  .play()
+  .catch(()=>{});
+
+  countdown.innerHTML = n;
+}
 
 }else{
 
 clearInterval(timer);
 
 countdown.innerHTML = "✦";
+
+document.getElementById("sparkleSound")
+.play()
+.catch(()=>{});
 
 setTimeout(()=>{
 
@@ -1077,6 +1086,10 @@ intro.classList.remove("active");
 document
 .getElementById("newspaper")
 .classList.add("active");
+
+document.getElementById("paperSound")
+.play()
+.catch(()=>{});
 
 },1500);
 
@@ -1478,8 +1491,20 @@ document
   </div>
 
 </div>
-<audio id="bgMusic" loop>
+
+  <audio id="bgMusic" loop>
   <source src="0715.MP3" type="audio/mpeg">
+
+  <audio id="tickSound">
+  <source src="ticksound.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="paperSound">
+  <source src="papersound.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="sparkleSound">
+  <source src="sparklesound.mp3" type="audio/mpeg">
 </audio>
 </body>
 </html>
