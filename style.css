@@ -1,0 +1,1402 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#e9dfcb;
+    font-family:'Cormorant Garamond',serif;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page{
+    position:fixed;
+    inset:0;
+    display:none;
+    overflow:auto;
+}
+
+.active{
+    display:flex;
+}
+
+
+/* =========================================================
+   COUNTDOWN
+========================================================= */
+
+#countdown{
+
+    background:#111;
+    color:#f3e8d2;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:30px;
+
+    letter-spacing:4px;
+
+    text-align:center;
+
+    padding:20px;
+
+    line-height:1.4;
+
+    white-space:nowrap;
+}
+
+@media(max-width:600px){
+
+#countdown{
+
+    font-size:30px;
+    letter-spacing:3px;
+
+}
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+#introPage{
+
+    justify-content:center;
+    align-items:center;
+
+    background:#111;
+    color:#f3e8d2;
+
+    font-family:'Cinzel',serif;
+    font-size:40px;
+
+    text-align:center;
+
+    opacity:0;
+
+    transition:1.5s;
+
+}
+
+.intro-text{
+
+    padding:30px;
+
+    animation:fadeText 2s ease infinite alternate;
+
+}
+
+@keyframes fadeText{
+
+from{
+
+    opacity:.5;
+
+}
+
+to{
+
+    opacity:1;
+
+}
+
+}
+
+
+/* =========================================================
+   SPARKLE
+========================================================= */
+
+.sparkle{
+
+    position:fixed;
+
+    top:-30px;
+
+    font-size:20px;
+
+    pointer-events:none;
+
+    animation:fall linear forwards;
+
+    z-index:1;
+
+}
+
+@keyframes fall{
+
+to{
+
+    transform:translateY(110vh);
+
+    opacity:0;
+
+}
+
+}
+
+
+/* =========================================================
+   NEWSPAPER
+========================================================= */
+
+#newspaper{
+
+    background:#ece3d0;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:30px;
+
+}
+
+.paper{
+
+    background:#f5ecda;
+
+    width:100%;
+    max-width:900px;
+
+    padding:35px;
+
+    border:2px solid #d5c5a7;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+.date{
+
+    text-align:center;
+
+    letter-spacing:4px;
+
+    font-size:15px;
+
+}
+
+.title{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:70px;
+
+    font-weight:700;
+
+}
+
+.line{
+
+    height:2px;
+
+    background:#111;
+
+    margin:25px 0;
+
+}
+
+.headline{
+
+    text-align:center;
+
+    font-size:55px;
+
+    font-weight:700;
+
+}
+
+.sub{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-size:28px;
+
+}
+
+.cover{
+
+    width:100%;
+
+    margin-top:35px;
+
+    border:10px solid #fff;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+
+}
+
+.text{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.btn{
+
+    display:block;
+
+    margin:45px auto 0;
+
+    padding:18px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+.title{
+
+    font-size:45px;
+
+}
+
+.headline{
+
+    font-size:35px;
+
+}
+
+.sub{
+
+    font-size:20px;
+
+}
+
+.text{
+
+    font-size:22px;
+
+}
+
+}
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+#envelopePage,
+#letterPage{
+
+    justify-content:center;
+    align-items:center;
+
+    background:#ece3d0;
+
+    overflow:auto;
+
+    padding:40px 20px;
+
+    min-height:100dvh;
+
+}
+
+#galleryPage{
+
+    justify-content:center;
+    align-items:flex-start;
+
+    background:#ece3d0;
+
+    overflow:auto;
+
+    padding-top:40px;
+    padding-left:30px;
+    padding-right:30px;
+
+}
+
+.vintage-envelope{
+
+    width:320px;
+    height:220px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:#c7a980;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-10px);
+
+}
+
+}
+
+.seal{
+
+    width:60px;
+    height:60px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:50%;
+
+    background:#5a2d2d;
+
+    color:#fff;
+
+    font-size:30px;
+
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter-paper{
+
+    width:100%;
+    max-width:700px;
+
+    padding:60px 45px;
+
+    background:#f7eedc;
+
+    border:2px solid #c9b48d;
+
+    color:#2f2a24;
+
+    font-size:30px;
+
+    line-height:1.9;
+
+    position:relative;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.2),
+        inset 0 0 40px rgba(0,0,0,.08);
+
+}
+
+.letter-paper h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.letter-paper p{
+
+    text-align:left;
+
+    font-style:italic;
+
+}
+
+
+/* =========================================================
+   LETTER RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+.letter-paper{
+
+    width:95%;
+    max-width:95%;
+
+    padding:35px 22px;
+
+    font-size:17px;
+
+    line-height:2;
+
+    margin:auto;
+
+}
+
+.letter-paper h1{
+
+    font-size:28px;
+
+}
+
+.letter-paper p{
+
+    text-align:left;
+
+    font-style:italic;
+
+}
+
+}
+
+
+/* =========================================================
+   MEMORY BOOK
+========================================================= */
+
+.memory-title{
+
+    font-family:'Cinzel',serif;
+
+    font-size:50px;
+
+    color:#2f2a24;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.memory-book{
+
+    width:88%;
+    max-width:380px;
+
+    margin:auto;
+
+    padding:50px 0 60px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:60px;
+
+}
+
+.book-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:15px 15px 15px 35px;
+
+    border-radius:8px;
+
+    border:2px solid #d2be96;
+
+    background:linear-gradient(
+        180deg,
+        #f8f0df,
+        #f1e4cc
+    );
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,.2),
+        inset 0 0 30px rgba(0,0,0,.05);
+
+    transform:rotate(-1deg);
+
+}
+
+.book-page:nth-child(even){
+
+    transform:rotate(1deg);
+
+}
+
+.book-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+    left:30px;
+
+    width:2px;
+
+    background:#d7c5a3;
+
+}
+
+.book-page img{
+
+    width:92%;
+
+    display:block;
+
+    margin:0 auto 30px;
+
+    border:12px solid #fff;
+
+    border-radius:5px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+}
+
+.book-page h2{
+
+    text-align:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+.book-page p{
+
+    text-align:center;
+
+    font-size:20px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   MEMORY RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+.memory-title{
+
+    font-size:35px;
+
+}
+
+.memory-book{
+
+    padding-top:60px;
+
+    justify-content:center;
+
+}
+
+.book-page{
+
+    padding:25px 25px 25px 55px;
+
+}
+
+.book-page::before{
+
+    left:30px;
+
+}
+
+.book-page h2{
+
+    font-size:26px;
+
+}
+
+.book-page p{
+
+    font-size:22px;
+
+}
+
+}
+
+/* =========================================================
+   SCRATCH CARD
+========================================================= */
+
+.scratchCanvas{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:100;
+
+    touch-action:none;
+
+    border-radius:8px;
+
+}
+
+#typingText::after{
+
+    content:"|";
+
+    animation:blink .8s infinite;
+
+}
+
+@keyframes blink{
+
+50%{
+
+    opacity:0;
+
+}
+
+}
+
+
+/* =========================================================
+   STAR PAGE
+========================================================= */
+
+#starPage{
+
+    background:linear-gradient(
+        180deg,
+        #05071a 0%,
+        #02020f 50%,
+        #000 100%
+    );
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+}
+
+.night-sky{
+
+    position:relative;
+
+    text-align:center;
+
+}
+
+.star-name{
+
+    font-family:'Cinzel',serif;
+
+    font-size:60px;
+
+    color:#fff;
+
+    letter-spacing:15px;
+
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,.8),
+        0 0 40px rgba(255,255,255,.5);
+
+}
+
+.star-name span{
+
+    animation:blinkStar 2s infinite;
+
+}
+
+.star-name span:nth-child(1){
+
+    animation-delay:0s;
+
+}
+
+.star-name span:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+.star-name span:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+.star-name span:nth-child(2),
+.star-name span:nth-child(4){
+
+    animation:none;
+
+    opacity:1;
+
+    text-shadow:none;
+
+}
+
+.star-text{
+
+    color:#f3e8d2;
+
+    font-size:22px;
+
+    font-style:italic;
+
+    margin-top:40px;
+
+}
+
+@keyframes blinkStar{
+
+0%,100%{
+
+    opacity:1;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #fff;
+
+}
+
+50%{
+
+    opacity:.3;
+
+    text-shadow:none;
+
+}
+
+}
+
+
+/* =========================================================
+   CAKE PAGE
+========================================================= */
+
+#cakePage{
+
+    background:#f5ecda;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.cake-box{
+
+    text-align:center;
+
+}
+
+.birthday-cake{
+
+    position:relative;
+
+    width:280px;
+
+    margin:50px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.candles{
+
+    position:absolute;
+
+    top:35px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:12px;
+
+    z-index:10;
+
+}
+
+.mini-candle{
+
+    width:8px;
+
+    height:40px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    position:relative;
+
+}
+
+.mini-candle::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+
+    height:16px;
+
+    background:gold;
+
+    border-radius:50%;
+
+    top:-14px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    box-shadow:0 0 15px gold;
+
+}
+
+.flame-off::before{
+
+    display:none;
+
+}
+
+.cake-img{
+
+    width:100%;
+
+    display:block;
+
+    filter:drop-shadow(
+        0 15px 20px rgba(0,0,0,.15)
+    );
+
+}
+
+#wishMessage{
+
+    margin-top:30px;
+
+    max-width:320px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    font-size:22px;
+
+    line-height:1.5;
+
+    color:#2f2a24;
+
+    font-style:italic;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:1.5s;
+
+}
+
+#wishMessage.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+@keyframes fadeWish{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* =========================================================
+   VIDEO PAGE
+========================================================= */
+
+#videoPage,
+#endingPage{
+
+    background:#111;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#f3e8d2;
+
+}
+
+.video-box{
+
+    width:90%;
+    max-width:700px;
+
+}
+
+.video-box video{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+}
+
+
+/* =========================================================
+   ENDING PAGE
+========================================================= */
+
+.ending-card{
+
+    max-width:700px;
+
+    overflow:visible;
+
+    animation:fadeEnding 2s;
+
+    transform:translateY(-120px);
+
+}
+
+.movie-text{
+
+    height:420px;
+
+    overflow:hidden;
+
+}
+
+.movie-text span{
+
+    display:block;
+
+    padding-top:420px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    line-height:1.7;
+
+    animation:movieText 40s linear infinite;
+
+}
+
+.movie-text h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:60px;
+
+    margin-bottom:50px;
+
+}
+
+@keyframes movieText{
+
+from{
+
+    transform:translateY(0);
+
+}
+
+to{
+
+    transform:translateY(-850px);
+
+}
+
+}
+
+@keyframes fadeEnding{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+/* =========================================================
+   SECRET PAGE
+========================================================= */
+
+#secretPage{
+
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #241c11 0%,
+        #111 65%,
+        #050505 100%
+    );
+
+}
+
+#secretPage::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle,
+        #d7b96d22 1px,
+        transparent 1px
+    );
+
+    background-size:80px 80px;
+
+    opacity:.35;
+
+    animation:moveStars 20s linear infinite;
+
+}
+
+@keyframes moveStars{
+
+from{
+
+    transform:translateY(0);
+
+}
+
+to{
+
+    transform:translateY(80px);
+
+}
+
+}
+
+.secret-box{
+
+    position:relative;
+
+    z-index:2;
+
+    width:360px;
+
+    padding:55px 35px;
+
+    text-align:center;
+
+    border-radius:32px;
+
+    background:rgba(20,20,20,.72);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 35px 80px rgba(0,0,0,.65);
+
+}
+
+.lock-icon{
+
+    font-size:58px;
+
+    margin-bottom:25px;
+
+    animation:floatLock 3s ease-in-out infinite;
+
+    transition:.5s;
+
+}
+
+@keyframes floatLock{
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-8px);
+
+}
+
+}
+
+.secret-box h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:46px;
+
+    color:#f3e8d2;
+
+    letter-spacing:2px;
+
+    margin-bottom:12px;
+
+}
+
+.secret-box p{
+
+    font-size:19px;
+
+    color:#cdbb96;
+
+    line-height:1.6;
+
+    margin-bottom:35px;
+
+}
+
+
+/* =========================================================
+   PASSWORD
+========================================================= */
+
+.pin-dots{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:16px;
+
+    margin-bottom:35px;
+
+}
+
+.pin-dots span{
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+
+    border:2px solid #d8bf7b;
+
+    transition:.3s;
+
+}
+
+.pin-dots span.filled{
+
+    background:#e8c977;
+
+    box-shadow:
+    0 0 15px rgba(255,220,120,.8);
+
+}
+
+.pin-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,60px);
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.pin-grid button{
+
+    width:60px;
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:#232323;
+
+    color:#f4e9d4;
+
+    font-family:'Cinzel',serif;
+
+    font-size:26px;
+
+    transition:.25s;
+
+    box-shadow:
+    0 10px 22px rgba(0,0,0,.45);
+
+}
+
+.pin-grid button:hover{
+
+    transform:scale(1.08);
+
+    background:#363636;
+
+}
+
+.pin-grid button:active{
+
+    transform:scale(.92);
+
+}
+
+#passwordError{
+
+    display:none;
+
+    margin-top:22px;
+
+    color:#d88686;
+
+    font-size:16px;
+
+}
+
+
+/* =========================================================
+   GIFT
+========================================================= */
+
+@keyframes fadeGift{
+
+from{
+
+    opacity:0;
+
+    transform:scale(.95);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+}
+
+@keyframes giftFloat{
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-12px);
+
+}
+
+}
