@@ -642,53 +642,25 @@ function openGift(){
 
     setTimeout(()=>{
 
-        secretPage.innerHTML = `
+secretPage.innerHTML = `
 
-<div
-style="
-width:100%;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-animation:fadeGift 1s;
-">
+<div class="gift-menu">
 
-<div
-id="giftBox"
-style="
-font-size:95px;
-cursor:pointer;
-animation:giftFloat 2.5s ease-in-out infinite;
-">
+    <h1>Your Gifts 🎁</h1>
 
-🎁
+    <p>Choose one to open</p>
 
-</div>
+    <button class="gift-btn" onclick="openVoucher()">
+        🎟 Voucher Collection
+    </button>
 
-<h2
-style="
-margin-top:25px;
-font-family:Cinzel;
-color:#f3e8d2;
-letter-spacing:2px;
-">
+    <button class="gift-btn" onclick="openScrapbook()">
+        📖 Scrapbook
+    </button>
 
-Your Gift
-
-</h2>
-
-<p
-style="
-margin-top:10px;
-color:#d7c9ab;
-font-size:20px;
-">
-
-Tap the gift to open ✨
-
-</p>
+    <button class="gift-btn" onclick="openInvitation()">
+        💌 Invitation
+    </button>
 
 </div>
 
