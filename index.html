@@ -1260,8 +1260,8 @@ style="width:100%; border-radius:20px;">
   <source src="video2.mp4" type="video/mp4">
 </video>
 
-    <button class="btn" onclick="openEnding()">
-      Continue →
+    <button class="btn" onclick="openSecret()">
+    Continue →
     </button>
 
   </div>
@@ -1636,7 +1636,14 @@ function openVideo(){
   .getElementById("bgMusic")
   .play().catch(()=>{});
 }
-  
+
+function openSecret(){
+
+    document.getElementById("videoPage").classList.remove("active");
+
+    document.getElementById("secretPage").classList.add("active");
+
+}  
 function blowCandle(){
 
   document
@@ -1660,30 +1667,6 @@ function blowCandle(){
 
   document.getElementById("wishMessage")
   .classList.add("show");
-}
-
-function openEnding(){
-
-document
-.getElementById("videoPage")
-.classList.remove("active");
-
-document
-.getElementById("endingPage")
-.classList.add("active");
-
-setTimeout(()=>{
-
-document
-.getElementById("endingPage")
-.classList.remove("active");
-
-document
-.getElementById("secretPage")
-.classList.add("active");
-
-},38000);
-
 }
 
 let enteredPin = "";
@@ -1904,34 +1887,15 @@ Your surprise goes here.
 
 },900);
 
+setTimeout(()=>{
+
+    document.getElementById("secretPage").classList.remove("active");
+
+    document.getElementById("endingPage").classList.add("active");
+
+},6000);
 }
 </script>
-
-<div id="endingPage" class="page">
-
-  <div class="ending-card">
-
-    <div class="movie-text">
-  <span>
-    <h1>The End ✨</h1>
-
-    Thank you for reading this little surprise.
-    <br>
-
-    I hope today, this gift can make you smile.
-    <br>
-
-    I love you today, tomorrow and always 🖤
-    <br><br>
-
-    Your beautiful girl
-    <br>
-
-    ❀ Friska ❀
-  </span>
-</div>
-</div>
-</div>
 
 <div id="secretPage" class="page">
 
@@ -1982,6 +1946,32 @@ Wrong Password 🤍
 
 </div>
 
+</div>
+
+<div id="endingPage" class="page">
+
+  <div class="ending-card">
+
+    <div class="movie-text">
+  <span>
+    <h1>The End ✨</h1>
+
+    Thank you for reading this little surprise.
+    <br>
+
+    I hope today, this gift can make you smile.
+    <br>
+
+    I love you today, tomorrow and always 🖤
+    <br><br>
+
+    Your beautiful girl
+    <br>
+
+    ❀ Friska ❀
+  </span>
+</div>
+</div>
 </div>
 
   <audio id="bgMusic" loop>
