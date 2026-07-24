@@ -809,6 +809,70 @@ transform:scale(.96);
     transform:translateY(-850px);
   }
 }
+
+#secretPage{
+display:flex;
+justify-content:center;
+align-items:center;
+background:#111;
+color:#f3e8d2;
+}
+
+.secret-box{
+
+background:#1b1b1b;
+
+padding:45px;
+
+border-radius:25px;
+
+width:90%;
+max-width:420px;
+
+text-align:center;
+
+box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+}
+
+.lock-icon{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+transition:.5s;
+
+}
+
+.secret-box h1{
+
+font-family:'Cinzel',serif;
+
+margin-bottom:15px;
+
+}
+
+.secret-box input{
+
+width:100%;
+
+padding:16px;
+
+margin-top:25px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+text-align:center;
+
+outline:none;
+
+}
+
 </style>
 </head>
 
@@ -1434,7 +1498,7 @@ function blowCandle(){
   .classList.add("show");
 }
 
- function openEnding(){
+function openEnding(){
 
 document
 .getElementById("videoPage")
@@ -1444,9 +1508,86 @@ document
 .getElementById("endingPage")
 .classList.add("active");
 
+setTimeout(()=>{
+
+document
+.getElementById("endingPage")
+.classList.remove("active");
+
+document
+.getElementById("secretPage")
+.classList.add("active");
+
+},45000);
+
 }
 
+function checkPassword(){
+
+const pass =
+document.getElementById("giftPassword").value;
+
+if(pass === "3107"){
+
+document.querySelector(".lock-icon").innerHTML="🔓";
+
+setTimeout(()=>{
+
+openGift();
+
+},800);
+
+}else{
+
+const err =
+document.getElementById("passwordError");
+
+err.style.display="block";
+
+}
+
+}
+
+function openGift(){
+
+alert("Gift berhasil dibuka ❤️");
+
+}
 </script>
+
+<div id="secretPage" class="page">
+
+  <div class="secret-box">
+
+    <div class="lock-icon">🔒</div>
+
+    <h1>Secret Gift</h1>
+
+    <p>
+      Only Dhicky can open this gift.
+    </p>
+
+    <input
+      id="giftPassword"
+      type="password"
+      placeholder="Enter Password">
+
+    <button class="btn" onclick="checkPassword()">
+      Unlock
+    </button>
+
+    <p
+    id="passwordError"
+    style="
+      color:#b84b4b;
+      margin-top:15px;
+      display:none;">
+      Wrong Password 🤍
+    </p>
+
+  </div>
+
+</div>
 
 <div id="endingPage" class="page">
 
