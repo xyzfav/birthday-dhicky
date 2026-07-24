@@ -811,7 +811,6 @@ transform:scale(.96);
 }
 
 #secretPage{
-display:flex;
 justify-content:center;
 align-items:center;
 background:
@@ -1690,110 +1689,6 @@ document
 
 }
 
-let pin = "";
-
-const correctPin = "3107";
-
-function pressPin(num){
-
-if(pin.length>=4) return;
-
-pin += num;
-
-updateDots();
-
-}
-
-function updateDots(){
-
-const dots =
-document.querySelectorAll("#pinDots span");
-
-dots.forEach((dot,index)=>{
-
-if(index<pin.length){
-
-dot.classList.add("active");
-
-}else{
-
-dot.classList.remove("active");
-
-}
-
-});
-
-}
-
-function clearPin(){
-
-pin = pin.slice(0,-1);
-
-updateDots();
-
-}
-
-function checkPin(){
-
-if(pin===correctPin){
-
-document
-.getElementById("lockIcon")
-.innerHTML="🔓";
-
-setTimeout(()=>{
-
-openGift();
-
-},700);
-
-}else{
-
-pin="";
-
-updateDots();
-
-document
-.getElementById("passwordError")
-.style.display="block";
-
-setTimeout(()=>{
-
-document
-.getElementById("passwordError")
-.style.display="none";
-
-},1500);
-
-}
-
-}
-
-function updateDots(){
-
-  const dots =
-  document.querySelectorAll("#pinDots span");
-
-  dots.forEach((dot,index)=>{
-
-    if(index < pin.length){
-      dot.classList.add("active");
-    }else{
-      dot.classList.remove("active");
-    }
-
-  });
-
-}
-
-function clearPin(){
-
-  pin = pin.slice(0,-1);
-
-  updateDots();
-
-}
-
 let enteredPin = "";
 
 function pressPin(num){
@@ -1885,6 +1780,32 @@ function openGift(){
 }
 </script>
 
+<div id="endingPage" class="page">
+
+  <div class="ending-card">
+
+    <div class="movie-text">
+  <span>
+    <h1>The End ✨</h1>
+
+    Thank you for reading this little surprise.
+    <br>
+
+    I hope today, this gift can make you smile.
+    <br>
+
+    I love you today, tomorrow and always 🖤
+    <br><br>
+
+    Your beautiful girl
+    <br>
+
+    ❀ Friska ❀
+  </span>
+</div>
+</div>
+</div>
+
 <div id="secretPage" class="page">
 
 <div class="secret-box">
@@ -1932,30 +1853,6 @@ Wrong Password 🤍
 
 </div>
 
-</div>
-<div id="endingPage" class="page">
-
-  <div class="ending-card">
-
-    <div class="movie-text">
-  <span>
-    <h1>The End ✨</h1>
-
-    Thank you for reading this little surprise.
-    <br>
-
-    I hope today, this gift can make you smile.
-    <br>
-
-    I love you today, tomorrow and always 🖤
-    <br><br>
-
-    Your beautiful girl
-    <br>
-
-    ❀ Friska ❀
-  </span>
-</div>
 </div>
 
   <audio id="bgMusic" loop>
